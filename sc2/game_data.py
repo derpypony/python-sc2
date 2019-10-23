@@ -23,7 +23,8 @@ def split_camel_case(text) -> list:
         []
     ))
 # The GameData class is used in client.py 141th line. 
-# The "data" parameter can be found in client.py 141th line also, which is reated to data.proto in Blizzard/s2client-proto
+# The "data" parameter can be found in client.py 141th line also, which is reated to data.proto in Blizzard/s2client-proto.
+# "data" is basically a JSON data
 
 class GameData:
     def __init__(self, data):
