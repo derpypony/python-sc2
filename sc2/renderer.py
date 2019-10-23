@@ -1,3 +1,4 @@
+# this package is only used in client.py
 import datetime
 
 from s2clientprotocol import (
