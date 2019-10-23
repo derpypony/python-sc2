@@ -137,7 +137,7 @@ class Client(Protocol):
         """ EXPERIMENTAL: Change self._client.game_step during the step function to increase or decrease steps per second """
         result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
         return result
-
+# The result.data is a JSON data, which can be found in sc2api.proro ResponseData.
     async def get_game_data(self) -> GameData:
         result = await self._execute(data=sc_pb.RequestData(ability_id=True, unit_type_id=True, upgrade_id=True))
         return GameData(result.data)
