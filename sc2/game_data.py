@@ -26,6 +26,8 @@ def split_camel_case(text) -> list:
 # The "data" parameter can be found in client.py 141th line also, which is reated to data.proto in Blizzard/s2client-proto.
 # "data" is basically a JSON data
 
+
+# The "data" parameter is a JSON data, which can be found in sc2api.proro ResponseData.
 class GameData:
     def __init__(self, data):
         ids = set(a.value for a in AbilityId if a.value != 0)
