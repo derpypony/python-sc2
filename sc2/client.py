@@ -141,7 +141,7 @@ class Client(Protocol):
     async def get_game_data(self) -> GameData:
         result = await self._execute(data=sc_pb.RequestData(ability_id=True, unit_type_id=True, upgrade_id=True))
         return GameData(result.data)
-
+# The result.game_info is ResponseGameInfo message in sc2api.proto, and it is basically a JSON data
     async def get_game_info(self) -> GameInfo:
         result = await self._execute(game_info=sc_pb.RequestGameInfo())
         return GameInfo(result.game_info)
