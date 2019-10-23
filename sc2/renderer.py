@@ -26,7 +26,7 @@ class Renderer(object):
 
     async def render(self, observation):
         render_data = observation.observation.render_data
-
+# i can't find ImageData type has
         map_size = render_data.map.size
         map_data = render_data.map.data
         minimap_size = render_data.minimap.size
