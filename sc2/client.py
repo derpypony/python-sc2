@@ -145,7 +145,7 @@ class Client(Protocol):
     async def get_game_info(self) -> GameInfo:
         result = await self._execute(game_info=sc_pb.RequestGameInfo())
         return GameInfo(result.game_info)
-
+# related to message Action in sc2api.proto
     async def actions(self, actions, game_data, return_successes=False):
         if not isinstance(actions, list):
             res = await self.actions([actions], game_data, return_successes)
