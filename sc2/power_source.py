@@ -2,7 +2,7 @@ from .position import Point2
 
 class PowerSource:
     @classmethod
-    def from_proto(cls, proto):
+    def from_proto(cls, proto): # the proto parameter could be related to "PowerSource" in raw.proto
         return cls(
             Point2.from_proto(proto.pos),
             proto.radius,
