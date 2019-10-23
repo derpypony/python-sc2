@@ -35,7 +35,7 @@ class GameData:
         self.units = {u.unit_id: UnitTypeData(self, u) for u in data.units if u.available}
         self.upgrades = {u.upgrade_id: UpgradeData(self, u) for u in data.upgrades}
         self.unit_types: Dict[int, UnitTypeId] = {}
-
+# @lru_cache is used to ease the calculation
     @lru_cache(maxsize=256)
     def calculate_ability_cost(self, ability) -> "Cost":
         if isinstance(ability, AbilityId):
