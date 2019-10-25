@@ -6,6 +6,7 @@ from .position import Point2
 
 
 class PixelMap:
+    # The proto parameter is ImageData from common.proto
     def __init__(self, proto, in_bits=False, mirrored=False):
         self._proto = proto
         assert self.width * self.height == (8 if in_bits else 1) * len(
