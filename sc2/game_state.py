@@ -85,6 +85,7 @@ class EffectData:
 
 
 class GameState:
+    # the response_observation parameter is ResponseObservation in sc2api.proto
     def __init__(self, response_observation, game_data):
         self.actions = response_observation.actions  # successful actions since last loop
         self.action_errors = response_observation.action_errors  # error actions since last loop
