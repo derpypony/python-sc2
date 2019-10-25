@@ -9,6 +9,7 @@ from .position import Point2, Rect, Size
 class Ramp:
     def __init__(self, points: Set[Point2], game_info: "GameInfo"):
         self._points: Set[Point2] = points
+            # The __game_info is StartRaw in raw.proto
         self.__game_info = game_info
         # tested by printing actual building locations vs calculated depot positions
         self.x_offset = 0.5  # might be errors with the pixelmap?
