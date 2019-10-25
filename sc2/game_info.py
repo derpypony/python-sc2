@@ -131,6 +131,7 @@ class Ramp:
         raise Exception("Not implemented. Trying to access a ramp that has a wrong amount of upper points.")
 
 # the "proto" parameter can be found in client.py 145th line, and "proto" is basically a JSON data
+# proto is ResponseGameInfo in sc2api.proto
 class GameInfo:
     def __init__(self, proto):
         # TODO: this might require an update during the game because placement grid and
