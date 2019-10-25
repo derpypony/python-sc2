@@ -67,6 +67,7 @@ class Observer(AbstractPlayer):
 
 class Player(AbstractPlayer):
     @classmethod
+    # the proto is PlayerInfo in sc2api.prot
     def from_proto(cls, proto):
         if PlayerType(proto.type) == PlayerType.Observer:
             return cls(proto.player_id, PlayerType(proto.type), None, None, None)
