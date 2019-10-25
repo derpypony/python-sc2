@@ -110,6 +110,7 @@ class GameState:
         visibleUnits, hiddenUnits, minerals, geysers, destructables, enemy, own = ([] for _ in range(7))
 
         for unit in self.observation.raw_data.units:
+            # every "unit" is a Unit in raw.prot
             if unit.is_blip:
                 hiddenUnits.append(unit)
             else:
