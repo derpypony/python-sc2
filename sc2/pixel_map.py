@@ -2,7 +2,7 @@ from typing import Callable, Set, FrozenSet, List
 
 from .position import Point2
 
-
+# The proto parameter is ImageData fromcommon.proto
 class PixelMap:
     def __init__(self, proto):
         self._proto = proto
