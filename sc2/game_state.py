@@ -13,6 +13,7 @@ from .constants import geyser_ids, mineral_ids
 
 
 class Blip:
+    # proto is Unit in raw.proto
     def __init__(self, proto):
         self._proto = proto
 
