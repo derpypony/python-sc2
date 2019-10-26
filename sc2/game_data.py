@@ -92,6 +92,7 @@ class AbilityData:
         return i != len(cls.ability_ids) and cls.ability_ids[i] == ability_id
 
     def __init__(self, game_data, proto):
+        # the proto is AbilityData in data.proto
         self._game_data = game_data
         self._proto = proto
 
