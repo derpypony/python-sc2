@@ -14,6 +14,7 @@ from .position import Point2, Point3
 class PassengerUnit:
     def __init__(self, proto_data, game_data):
         assert isinstance(game_data, GameData)
+        # proto_data could be Unit in raw,proto
         self._proto = proto_data
         self._game_data = game_data
         self.cache = {}
