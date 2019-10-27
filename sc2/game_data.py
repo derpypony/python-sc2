@@ -30,6 +30,7 @@ def split_camel_case(text) -> list:
 # The "data" parameter is a JSON data, which can be found in sc2api.proro ResponseData.
 class GameData:
     def __init__(self, data):
+        # ids are the int numbers from class AbilityId in ability_id.py
         ids = set(a.value for a in AbilityId if a.value != 0)
         self.abilities = {a.ability_id: AbilityData(self, a) for a in data.abilities if a.ability_id in ids}
         self.units = {u.unit_id: UnitTypeData(self, u) for u in data.units if u.available}
