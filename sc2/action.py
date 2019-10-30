@@ -5,6 +5,7 @@ from .position import Point2
 from .unit import Unit
 
 def combine_actions(action_iter):
+    # every a is a UnitCommand in unit_command.py
     for key, items in groupby(action_iter, key=lambda a: a.combining_tuple):
         ability, target, queue = key
 
